@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MT Warranty Program — Operator Guide</title>
+<style>
+:root{--mt:#1d6f42;--mt-dark:#14522f;--ink:#1d1d1f;--mut:#64748b;--tint:#eef5f0;--line:#dbe4de;--warn:#b91c1c;--gold:#b07d2b}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);background:#f5f5f4;font-size:14.5px;line-height:1.6}
+.page{max-width:860px;margin:20px auto;background:#fff;box-shadow:0 2px 12px rgba(0,0,0,.1)}
+header{background:var(--mt);color:#fff;padding:24px 40px}
+header h1{font-size:24px;font-weight:800}
+header p{opacity:.9;margin-top:4px;font-size:13px}
+main{padding:28px 40px 36px}
+h2{font-size:16px;font-weight:800;color:var(--mt-dark);margin:30px 0 10px;padding-bottom:6px;border-bottom:2px solid var(--mt)}
+h2:first-child{margin-top:0}
+p{margin-bottom:10px}
+.box{background:var(--tint);border-left:4px solid var(--mt);padding:12px 16px;margin:12px 0;border-radius:0 8px 8px 0}
+.box.warn{background:#fef2f2;border-color:var(--warn)}
+.box b{color:var(--mt-dark)}
+.box.warn b{color:var(--warn)}
+/* tier table */
+table{width:100%;border-collapse:collapse;margin:12px 0;font-size:13.5px}
+th{background:var(--mt);color:#fff;text-align:left;padding:8px 12px;font-size:12px;text-transform:uppercase;letter-spacing:.05em}
+td{padding:9px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+tr:nth-child(even) td{background:#fafcfa}
+td b{color:var(--mt-dark)}
+/* steps */
+.step{display:flex;gap:14px;margin:14px 0;align-items:flex-start}
+.step .n{background:var(--mt);color:#fff;font-weight:800;width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:14px}
+.step .body{flex:1}
+.step .body b{display:block;margin-bottom:2px}
+.step .body .where{font-size:12px;color:var(--mut);font-style:italic}
+code{background:#f1f5f9;padding:2px 6px;border-radius:4px;font-size:12.5px;font-family:Consolas,monospace;color:#0f172a}
+.say{background:#fffbeb;border:1px solid #fde68a;border-radius:8px;padding:12px 16px;margin:10px 0;font-style:italic;color:#713f12}
+.say::before{content:"🗣 SAY THIS: ";font-style:normal;font-weight:800;font-size:11px;letter-spacing:.05em;color:var(--gold)}
+.todo{background:#f8fafc;border:1.5px dashed #94a3b8;border-radius:8px;padding:12px 16px;margin:10px 0;font-size:13px;color:#475569}
+.todo::before{content:"🔧 NOT BUILT YET: ";font-weight:800;font-size:11px;color:#64748b}
+.qref{display:flex;gap:10px;flex-wrap:wrap;margin:10px 0}
+.qcard{flex:1;min-width:230px;border:1.5px solid var(--line);border-radius:10px;padding:12px 14px}
+.qcard h4{font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--mt-dark);margin-bottom:6px}
+.qcard p{font-size:12.5px;color:var(--mut);margin:0}
+footer{background:var(--tint);padding:14px 40px;font-size:11.5px;color:var(--mut);border-top:1px solid var(--line)}
+@media print{body{background:#fff}.page{box-shadow:none;margin:0}}
+</style></head>
+<body>
+<div class="page">
+<header>
+  <h1>🛡️ Warranty Program — Operator Guide</h1>
+  <p>How the parts &amp; labor warranty works, what lives where in DSM, and exactly what to do at each moment. Written July 2026.</p>
+</header>
+<main>
+
+<h2>The big picture in one paragraph</h2>
+<p>Every install gets the manufacturer's <b>10-year parts</b> warranty (we register it) and our <b>2-year labor</b> warranty (free, automatic, our own promise). Customers on our <b>$29/mo maintenance plan</b> get labor stretched to <b>5 years</b> — the warranty is the hook that sells the plan, and the plan is the recurring revenue that pays for the warranty. Customers who want certainty can buy a <b>10-year labor policy</b> (third-party insured, one-time price on the quote). That's the whole program.</p>
+
+<h2>The three tiers — who covers what</h2>
+<table>
+  <tr><th>Tier</th><th>What the customer gets</th><th>Who pays for repairs</th><th>What it costs them</th></tr>
+  <tr><td><b>2-Year Labor</b><br>(everyone)</td><td>Free labor on covered repairs for 2 years after install</td><td><b>Us.</b> Our own promise, backed by our workmanship. Years 1-2 failures are rare on our installs.</td><td>Nothing — included</td></tr>
+  <tr><td><b>5-Year Labor</b><br>(plan members)</td><td>Labor coverage extends to 5 years, alive as long as their maintenance plan stays active</td><td><b>Us.</b> Still our promise — but they're paying $348/yr in plan revenue and we're maintaining the equipment twice a year, so real risk is tiny.</td><td>The $29/mo plan (which they should want anyway)</td></tr>
+  <tr><td><b>10-Year Labor</b><br>(optional purchase)</td><td>Labor locked for the full decade, matches the parts term, transferable with the home</td><td><b>JB Warranty (or similar).</b> We buy a policy per install (~$250-500 our cost), they pay the marked-up price, insurer reimburses our labor on claims.</td><td>One-time price on the quote (~$500-700, TBD after JB dealer setup)</td></tr>
+</table>
+
+<div class="box"><b>Key idea:</b> the 5-year tier is never sold as a warranty — it's <b>included with the plan</b>. The question at the quote table is "do you want the maintenance plan?" not "do you want to buy warranty years."</div>
+
+<h2>Where each piece lives</h2>
+<div class="qref">
+  <div class="qcard"><h4>📄 The Warranty Sheet</h4><p>Printable HTML doc (mt-installation-warranty.html). Customer-facing. Print or PDF it into every install quote packet. Has a signature block with a Warranty Tier line.</p></div>
+  <div class="qcard"><h4>🔧 The Job Record</h4><p>DSM → Jobs → job detail. Install jobs show <b>Warranty:</b> and <b>Registered:</b> lines. Fields: tier, provider, policy #, registration date. Red ⚠ warning if a completed install isn't registered.</p></div>
+  <div class="qcard"><h4>📋 The Contracts Page</h4><p>DSM → Contracts. The customer's $29/mo plan lives here as a Residential Protection Plan row. Its <b>active status IS the 5-year warranty</b> — cancelled plan = coverage reverts to 2 years.</p></div>
+</div>
+
+<h2>Workflow ① — Quoting an install</h2>
+<div class="step"><div class="n">1</div><div class="body"><b>Include the warranty sheet in the quote packet.</b><div class="where">Print/PDF mt-installation-warranty.html</div></div></div>
+<div class="step"><div class="n">2</div><div class="body"><b>Say the one-sentence pitch.</b>
+<div class="say">Your install comes with the manufacturer's 10-year parts warranty — I register that for you — plus 2 years labor from me, free. Most of my customers go on the maintenance plan, $29 a month, two tune-ups a year, and that stretches your labor coverage to 5 years. If you want labor locked for the full 10 no matter what, that's a one-time option I'll price on your quote.</div>
+</div></div>
+<div class="step"><div class="n">3</div><div class="body"><b>Two independent yes/no questions.</b> Plan? (→ 5yr) Full 10-year lock? (→ policy). They stack: plan + 10-year is the best customer. And a 10-year buyer should STILL take the plan — documented maintenance is what keeps every warranty claim valid.</div></div>
+
+<h2>Workflow ② — Closing an install (the checklist)</h2>
+<div class="step"><div class="n">1</div><div class="body"><b>Customer signs the warranty sheet</b> with their tier circled/written on the Warranty Tier line. Photo of it onto the job (job attachments).</div></div>
+<div class="step"><div class="n">2</div><div class="body"><b>Register the equipment with the manufacturer — within 7 days.</b> Unregistered equipment usually gets only 5-yr parts instead of 10. Then record the date on the job.<div class="where">Job detail shows a red ⚠ NOT REGISTERED on completed installs until this is done.</div></div></div>
+<div class="step"><div class="n">3</div><div class="body"><b>If they took the plan:</b> create their contract. Contracts page → the plan row should exist via their Stripe signup, or add it manually. Plan must start within 30 days of install for the 5-year tier to apply.</div></div>
+<div class="step"><div class="n">4</div><div class="body"><b>If they bought the 10-year:</b> purchase the JB policy on that equipment (deadline: usually 60-90 days after install — do it same week). Record provider + policy # on the job.</div></div>
+<div class="step"><div class="n">5</div><div class="body"><b>Set the warranty fields on the job.</b> Tier, provider, policy #, registration date.
+<div class="todo">There's no form for these yet — for now it's a one-line SQL update, or ask Claude. Building the dropdown + "mark registered" button + auto-checklist is the next dead-zone project.</div></div></div>
+
+<h2>Workflow ③ — A warranty call comes in (year 1-10)</h2>
+<div class="step"><div class="n">1</div><div class="body"><b>Search the job</b> (Jobs page → search customer name/phone). Read the Warranty line: tier, policy #, registered date.</div></div>
+<div class="step"><div class="n">2</div><div class="body"><b>Check coverage by tier:</b> Within 2 years of install → covered, period. Tier says 5yr-plan → glance at Contracts: plan <b>active</b> = covered · <b>cancelled/past-due</b> = coverage reverted to the 2-year window. Tier says 10yr → covered; do the repair, then file the labor claim with JB using the policy # (check their pre-authorization rules before major repairs like compressors).</div></div>
+<div class="step"><div class="n">3</div><div class="body"><b>Covered call = no labor charge, no trip charge.</b> This is the moment the program earns its reputation — a warranty call handled instantly and graciously creates a customer for life and a review.</div></div>
+<div class="box warn"><b>Watch for the lapse alert:</b> if a plan member's card fails, Telegram pings the DSM group ("⚠ PLAN PAYMENT FAILED"). Stripe retries automatically — but if it fails again, call the customer. A lapsed plan quietly kills their 5-year coverage, and finding that out during a breakdown is the worst possible moment.</div>
+
+<h2>What's built vs. what's pending</h2>
+<table>
+  <tr><th>Piece</th><th>Status</th></tr>
+  <tr><td>Customer warranty sheet (printable)</td><td>✅ Done — needs "$29/mo" added to middle tier + your final read</td></tr>
+  <tr><td>Warranty fields + display on job detail (with ⚠ registration warning)</td><td>✅ Live in DSM</td></tr>
+  <tr><td>$29/mo plan billing (Stripe) + auto-scheduled visits (pm_scheduler)</td><td>✅ Already existed — running today</td></tr>
+  <tr><td>Plan-lapse Telegram alert</td><td>✅ Live</td></tr>
+  <tr><td>Payment-webhook fixed (repair payments no longer auto-enroll plans)</td><td>✅ Fixed tonight</td></tr>
+  <tr><td>JB Warranty dealer account + real 10-yr pricing</td><td>⏳ Phone call — this week</td></tr>
+  <tr><td>Warranty tier dropdown / "mark registered" button on job page</td><td>⏳ Next dead-zone build</td></tr>
+  <tr><td>Auto-checklist when an install completes (register → policy → plan, with due dates + nagging)</td><td>⏳ Next dead-zone build</td></tr>
+</table>
+
+<h2>First three phone calls</h2>
+<p>Ramy Morsy, Tomika Geanes, and Jared Beavers — recent paid customers (the three the webhook falsely enrolled, now cancelled). Each is a warm, honest plan pitch: <i>"You're eligible for our Protection Plan — $29 a month, two tune-ups a year, priority scheduling, and it extends labor coverage on work we do."</i> One yes and the program has its first real member.</p>
+
+</main>
+<footer>Mechanical Temp LLC — internal operator guide. Companion documents: mt-installation-warranty.html (customer sheet). Systems: DSM Jobs (warranty fields), DSM Contracts (plan status), Telegram DSM group (lapse alerts).</footer>
+</div>
+</body></html>
