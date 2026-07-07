@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Warranty Sales — Practice Sheet</title>
+<style>
+:root{--mt:#1d6f42;--dark:#14522f;--ink:#1d1d1f;--mut:#64748b;--tint:#eef5f0;--line:#dbe4de;--gold:#b07d2b;--red:#b91c1c}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);background:#f5f5f4;font-size:15px;line-height:1.65}
+.page{max-width:820px;margin:20px auto;background:#fff;box-shadow:0 2px 12px rgba(0,0,0,.1)}
+header{background:var(--mt);color:#fff;padding:22px 40px}
+header h1{font-size:22px;font-weight:800}
+header p{opacity:.9;font-size:13px;margin-top:3px}
+main{padding:26px 40px 40px}
+h2{font-size:15px;font-weight:800;color:var(--dark);margin:28px 0 10px;padding-bottom:5px;border-bottom:2px solid var(--mt);text-transform:uppercase;letter-spacing:.04em}
+h2:first-child{margin-top:0}
+p{margin-bottom:10px}
+.big{background:var(--tint);border:2px solid var(--mt);border-radius:10px;padding:16px 20px;margin:12px 0;font-size:16px}
+.big b{color:var(--dark)}
+.two{display:flex;gap:14px;margin:12px 0}
+.half{flex:1;border:1.5px solid var(--line);border-radius:10px;padding:14px 16px}
+.half h3{font-size:13px;font-weight:800;margin-bottom:6px}
+.half.rent h3{color:#0369a1}
+.half.buy h3{color:var(--gold)}
+.half p{font-size:13px;color:#374151;margin:0}
+.path{display:flex;gap:12px;align-items:flex-start;border-bottom:1px solid var(--line);padding:10px 0}
+.path .n{background:var(--mt);color:#fff;font-weight:800;min-width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;margin-top:2px}
+.path .body{flex:1;font-size:14px}
+.path .body b{display:block}
+.path .money{font-variant-numeric:tabular-nums;font-weight:800;color:var(--dark);white-space:nowrap;font-size:14px}
+.say{background:#fffbeb;border:1px solid #fde68a;border-radius:8px;padding:12px 16px;margin:10px 0;font-style:italic;color:#713f12;font-size:14px}
+.say::before{content:"🗣 SAY IT LIKE THIS: ";font-style:normal;font-weight:800;font-size:11px;color:var(--gold);display:block;margin-bottom:4px}
+.obj{border:1.5px solid #fecaca;border-radius:10px;padding:14px 16px;margin:12px 0}
+.obj .q{font-weight:800;color:var(--red);margin-bottom:6px}
+.obj .a{font-size:14px}
+.drill{background:#f8fafc;border:1.5px dashed #94a3b8;border-radius:10px;padding:14px 16px;margin:12px 0}
+.drill .q{font-weight:800;margin-bottom:4px}
+.drill .ans{font-size:13px;color:#475569;margin-top:6px}
+.drill .ans b{color:var(--dark)}
+details{margin-top:6px}
+summary{cursor:pointer;font-size:12px;font-weight:700;color:var(--mt)}
+.rule{background:#fef2f2;border-left:4px solid var(--red);padding:10px 14px;margin:10px 0;font-size:13.5px;border-radius:0 8px 8px 0}
+.rule b{color:var(--red)}
+@media print{body{background:#fff}.page{box-shadow:none;margin:0}}
+</style></head>
+<body>
+<div class="page">
+<header>
+  <h1>🛡️ Warranty Sales — Practice Sheet</h1>
+  <p>Read it twice. Say the scripts out loud. Then do the drills at the bottom without peeking.</p>
+</header>
+<main>
+
+<h2>The whole thing in three sentences</h2>
+<div class="big">
+1. Every install already comes with <b>10-year parts</b> (manufacturer, we register it) and <b>2-year labor</b> (us, free).<br><br>
+2. The <b>$29/mo maintenance plan</b> is a maintenance product — two tune-ups a year. The <b>5-year labor extension is a perk</b> of being on it, alive only while the plan is.<br><br>
+3. The <b>10-year labor policy</b> is a separate one-time purchase (~$1,395 on the quote), insured by JB. Bought once, locked forever, transfers with the house.
+</div>
+
+<h2>The one idea that makes it click: RENT vs BUY</h2>
+<div class="two">
+  <div class="half rent">
+    <h3>🔵 5-YEAR = RENTED</h3>
+    <p>It exists because their plan is active. Stop paying $29/mo → the extension evaporates, coverage falls back to the 2-year window. It's a membership perk, like lounge access with a credit card. <b>They never "buy 5 years" — they hold it.</b></p>
+  </div>
+  <div class="half buy">
+    <h3>🟡 10-YEAR = BOUGHT</h3>
+    <p>One line item, one payment, done. JB insures it. Nothing to keep current (except maintenance, which every warranty requires anyway). It's theirs even if they sell the house. <b>This is the only warranty they ever actually purchase.</b></p>
+  </div>
+</div>
+<p style="font-size:13px;color:var(--mut)">If you remember nothing else: <b>the plan is not a warranty product.</b> It's a maintenance product that carries a warranty perk. Say "the plan comes with" — never "the plan costs $29 for 5 years of warranty."</p>
+
+<h2>The four paths on a $9,000 install</h2>
+<div class="path"><div class="n">1</div><div class="body"><b>Base</b> — 10-yr parts + 2-yr labor. No decisions.</div><div class="money">$9,000</div></div>
+<div class="path"><div class="n">2</div><div class="body"><b>Base + Plan</b> — same install, plus the $29/mo subscription (Stripe, separate from the quote). Labor reads as 5 years while active. <i>The most common right answer.</i></div><div class="money">$9,000 + $29/mo</div></div>
+<div class="path"><div class="n">3</div><div class="body"><b>Base + 10-Year</b> — JB policy as a line item on the quote. Labor locked for the decade, no subscription needed for the labor coverage itself.</div><div class="money">$10,395</div></div>
+<div class="path"><div class="n">4</div><div class="body"><b>Everything</b> — 10-year bought AND plan active. Not redundant: the policy covers the labor <i>money</i>; the plan keeps all warranties <i>valid</i> (manufacturers and JB both require documented maintenance). Best customer in the book.</div><div class="money">$10,395 + $29/mo</div></div>
+
+<h2>The driveway pitch (memorize this one)</h2>
+<div class="say">
+Your install comes with the manufacturer's 10-year parts warranty — I register that for you — plus 2 years of labor from me, free. Most of my customers go on the maintenance plan: $29 a month, two tune-ups a year, priority scheduling, and while you're on it your labor coverage runs 5 years instead of 2. And if you want labor locked in for the full 10 no matter what, that's a one-time option — I'll put the number on your quote.
+</div>
+<p style="font-size:13px;color:var(--mut)">Then stop talking. Two yes/no questions are now on the table: <b>plan?</b> and <b>lock the decade?</b> Let them pick.</p>
+
+<h2>The killer objection (this WILL come up)</h2>
+<div class="obj">
+  <div class="q">"The first 2 years are free — why am I paying for the plan during years I'm already covered?"</div>
+  <div class="a"><b>Flip it: the plan was never buying warranty.</b></div>
+  <div class="say">
+  Fair question — but the $29 isn't buying warranty years, it's buying the two tune-ups. Bought one at a time those visits run $250-300 a year, so the plan is the maintenance at a discount. And here's the thing most people don't know: your manufacturer's 10-year <b>parts</b> warranty requires documented maintenance — it's in every brand's fine print. Skip the tune-ups, and a year-6 coil claim can get denied. So the plan protects the ten years of coverage you already own, starting day one. The 5-year labor extension is just my thank-you on top.
+  </div>
+</div>
+<div class="obj">
+  <div class="q">"I'll just start the plan in year 2 then."</div>
+  <div class="a"><b>The 30-day rule.</b></div>
+  <div class="say">
+  The 5-year extension only applies when the plan starts within 30 days of install — same reason you can't buy flood insurance while the basement's filling. The extension is priced for a system that's been maintained its whole life. You can join the plan anytime for the maintenance itself — but the extended labor coverage is a day-one decision.
+  </div>
+</div>
+<div class="obj">
+  <div class="q">"Why would I buy the 10-year if the plan gives me 5?"</div>
+  <div class="a"><b>Rent vs buy, out loud.</b></div>
+  <div class="say">
+  The 5 rides on the plan — cancel the plan, it goes with it, and it ends at year five either way. The 10-year is bought once and it's yours no matter what — insured by a national warranty company, and it even transfers free if you sell the house. Years 6 through 10 are when compressors and coils actually fail, and that's exactly what it covers. Different animals: one's a perk, one's a policy.
+  </div>
+</div>
+
+<h2>Money map — who pays for what repair</h2>
+<div class="path"><div class="n">🔧</div><div class="body"><b>Failure in years 1-2:</b> WE eat the labor (our free promise). Parts = manufacturer. Rare on our installs.</div><div class="money">Us</div></div>
+<div class="path"><div class="n">🔧</div><div class="body"><b>Years 3-5, plan active:</b> WE eat the labor — but they've paid ~$348/yr in plan revenue and we've maintained it twice a year. Pre-funded, low risk.</div><div class="money">Us (funded)</div></div>
+<div class="path"><div class="n">🔧</div><div class="body"><b>Any year 1-10, JB policy:</b> we do the repair, file the claim, <b>JB reimburses our labor</b> at $150/hr + trip + parts allowance. Customer pays nothing.</div><div class="money">JB</div></div>
+<div class="rule"><b>Never forget:</b> a covered warranty call = no labor charge, no trip charge, handled graciously. That call is where the program earns its reputation and the review.</div>
+
+<h2>Drills — answer out loud, then check</h2>
+<div class="drill">
+  <div class="q">D1. Customer takes the plan at install, cancels it in month 30, blower motor dies in month 40. Covered?</div>
+  <details><summary>Check answer</summary><div class="ans"><b>No.</b> Plan lapsed → extension died with it → coverage reverted to the 2-year window, which ended at month 24. (Parts may still be covered by the manufacturer IF maintenance was documented — labor is on them.) This is why the lapse alert pings your phone.</div></details>
+</div>
+<div class="drill">
+  <div class="q">D2. Customer bought the 10-year, never joined the plan, compressor dies year 7. What happens?</div>
+  <details><summary>Check answer</summary><div class="ans"><b>Probably covered, with a risk.</b> JB pays the labor claim — BUT JB and the manufacturer both require maintenance records. If the system was visibly neglected, claims can be contested. This is why even 10-year buyers should take the plan: the policy covers the money, the plan protects the validity.</div></details>
+</div>
+<div class="drill">
+  <div class="q">D3. What does the customer actually receive for $29/mo? (List it without saying "warranty" first.)</div>
+  <details><summary>Check answer</summary><div class="ans">Two seasonal tune-ups (~$250-300 retail value), priority scheduling, no trip charge on covered calls, repair discount — <b>and then</b> the 5-year labor extension as the perk. Maintenance first, warranty last. If you lead with the warranty, you invite the "why pay during free years" objection.</div></details>
+</div>
+<div class="drill">
+  <div class="q">D4. $9K install, they take plan + 10-year. What's the quote total, what recurs, and what's your JB cost?</div>
+  <details><summary>Check answer</summary><div class="ans">Quote = <b>$10,395</b> ($9,000 + $1,395 JBALTH line). Recurring = <b>$29/mo</b> Stripe, separate. Your JB cost ≈ <b>$1,040</b> → ~$355 margin on the warranty line, plus $348/yr plan revenue, plus a customer locked in for a decade.</div></details>
+</div>
+<div class="drill">
+  <div class="q">D5. Year-4 no-cool call comes in. First three things you check in DSM?</div>
+  <details><summary>Check answer</summary><div class="ans">① Search the job → read the <b>Warranty line</b> (tier / policy # / registered date). ② If tier = 5yr-plan → <b>Contracts page</b>: plan active? ③ If 10yr → note the JB policy #, check pre-auth rules before big repairs. Then: covered = no labor charge, no trip charge, smile.</div></details>
+</div>
+<div class="drill">
+  <div class="q">D6. Say the entire driveway pitch from memory. Right now. Out loud.</div>
+  <details><summary>Check answer</summary><div class="ans">10-yr parts registered by us → 2-yr labor free → plan: $29/mo, two tune-ups, coverage runs 5 while on it → full-10 lock available, number on the quote. Then <b>stop talking.</b></div></details>
+</div>
+
+<h2>The cheat line if you blank</h2>
+<div class="big" style="text-align:center">
+"Parts are the manufacturer's job. The first two years of labor are mine, free.<br>
+The plan keeps everything valid and stretches labor to five.<br>
+The ten-year locks it forever. Which sounds like you?"
+</div>
+
+</main>
+</div>
+</body></html>
