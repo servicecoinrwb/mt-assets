@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mechanical Temp — Referral Cards — FRONTS (Avery 8877)</title>
+<style>
+:root{
+  --mt:#1d6f42; --deep:#14522f; --bright:#268a53;
+  --cream:#fbf9f3; --gold:#b07d2b; --ink:#16201b;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:#e7e9e6}
+body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif}
+
+/* ---- Screen controls (hidden on print) ---- */
+.toolbar{max-width:8.5in;margin:16px auto;text-align:center}
+.toolbar button{background:var(--mt);color:#fff;border:0;padding:10px 20px;border-radius:7px;font-weight:700;font-size:14px;cursor:pointer;margin:0 4px}
+.toolbar .note{display:block;margin-top:10px;font-size:12px;color:#555;line-height:1.5}
+.toggle{background:#64748b !important}
+
+/* ---- The physical sheet: 8.5 x 11, Avery 8877 grid ---- */
+.sheet{
+  width:8.5in; height:11in;
+  margin:0 auto; background:#fff;
+  padding:0.5in 0.75in;               /* Avery 8877: 0.5" top/bottom, 0.75" left/right */
+  display:grid;
+  grid-template-columns:2in 2in;       /* two 2"-tall... wait: cards are 3.5w x 2h */
+  grid-template-columns:3.5in 3.5in;   /* 2 columns of 3.5" wide */
+  grid-template-rows:repeat(5, 2in);    /* 5 rows of 2" tall */
+  gap:0;
+  box-shadow:0 2px 14px rgba(0,0,0,.12);
+}
+/* guide lines to help align (screen + optional print) */
+.guides .card{outline:0.5px dashed #bbb;}
+
+/* ---- Individual card face (front) ---- */
+.card{
+  width:3.5in; height:2in; overflow:hidden; position:relative;
+  color:#fff;
+  background:radial-gradient(125% 150% at 100% 0%, var(--bright) 0%, var(--mt) 44%, var(--deep) 100%);
+  -webkit-print-color-adjust:exact; print-color-adjust:exact;
+}
+.card .pad{padding:0.16in 0.2in; height:100%; display:flex; flex-direction:column; position:relative; z-index:2}
+.card .kicker{font-size:7pt; letter-spacing:.11em; text-transform:uppercase; font-weight:700; opacity:.9}
+.card .fifty{font-size:30pt; font-weight:800; line-height:.9; margin-top:2pt; letter-spacing:-.02em}
+.card .fifty small{font-size:14pt; font-weight:700; vertical-align:super; opacity:.9}
+.card .lead{font-size:8pt; line-height:1.32; margin-top:4pt; font-weight:500; max-width:2.05in}
+.card .foot{margin-top:auto; display:flex; justify-content:space-between; align-items:flex-end}
+.card .brand{font-size:8.5pt; font-weight:800; letter-spacing:.01em}
+.card .brand small{display:block; font-size:6pt; font-weight:500; opacity:.85; margin-top:1pt}
+.card .phone{font-size:10pt; font-weight:800; text-align:right; white-space:nowrap}
+.card .phone small{display:block; font-size:6pt; font-weight:500; opacity:.85}
+.card .wm{position:absolute; right:-0.28in; bottom:-0.34in; font-size:1.5in; line-height:1; opacity:.10; z-index:1; transform:rotate(-8deg)}
+
+/* ---- Back face variant ---- */
+.card.back{background:var(--cream); color:var(--ink);}
+.card.back .pad{padding:0.15in 0.2in}
+.card.back h3{font-size:8pt; color:var(--deep); font-weight:800; letter-spacing:.02em; margin-bottom:5pt; text-transform:uppercase}
+.card.back ol{list-style:none; counter-reset:step}
+.card.back li{counter-increment:step; padding-left:0.24in; position:relative; margin-bottom:4pt; font-size:7.5pt; line-height:1.4; font-weight:500}
+.card.back li::before{content:counter(step); position:absolute; left:0; top:-0.5pt; background:var(--mt); color:#fff; width:0.16in; height:0.16in; border-radius:50%; font-size:6pt; font-weight:800; display:flex; align-items:center; justify-content:center}
+.card.back .school{margin-top:auto; font-size:6.5pt; color:var(--gold); font-weight:700; letter-spacing:.01em}
+
+@media print{
+  @page{size:letter portrait; margin:0}
+  html,body{background:#fff}
+  .toolbar{display:none}
+  .sheet{box-shadow:none; margin:0; page-break-after:always}
+  .guides .card{outline:none;}   /* clean crop for final print */
+}
+</style></head>
+<body>
+
+<div class="toolbar">
+  <button onclick="window.print()">🖨 Print Sheet</button>
+  <button class="toggle" onclick="document.querySelectorAll('.sheet').forEach(s=>s.classList.toggle('guides'))">Toggle Alignment Guides</button>
+  <span class="note">    <b>Avery 8877 · FRONTS</b> · 10 cards (2 cols × 5 rows) · 3.5″ × 2″.<br>
+    Print at <b>100% / Actual Size</b> (NOT "fit to page"), portrait, Letter.<br>
+    <b>Step 1:</b> Print this FRONTS file on your Avery 8877 sheet. Then flip the sheet and run the BACKS file through to print on the reverse.</span>
+</div>
+
+<!-- ============ SHEET 1 — FRONTS (10 cards) ============ -->
+<div class="sheet">
+  <!-- card front, repeated 10x -->
+  <!-- 1 --><div class="card"><div class="pad">
+    <div class="wm">🤝</div>
+    <div class="kicker">Know someone who needs heat or AC?</div>
+    <div class="fifty"><small>$</small>50</div>
+    <div class="lead">Send them our way. When their job's done, this card is worth <b>$50</b> — our thanks.</div>
+    <div class="foot">
+      <div class="brand">MECHANICAL TEMP<small>Licensed HVAC · Metro Detroit</small></div>
+      <div class="phone">(313) 282-4758<small>mechanicaltemp.com</small></div>
+    </div>
+  </div></div>
+  <!-- 2 --><div class="card"><div class="pad">
+    <div class="wm">🤝</div>
+    <div class="kicker">Know someone who needs heat or AC?</div>
+    <div class="fifty"><small>$</small>50</div>
+    <div class="lead">Send them our way. When their job's done, this card is worth <b>$50</b> — our thanks.</div>
+    <div class="foot">
+      <div class="brand">MECHANICAL TEMP<small>Licensed HVAC · Metro Detroit</small></div>
+      <div class="phone">(313) 282-4758<small>mechanicaltemp.com</small></div>
+    </div>
+  </div></div>
+  <!-- 3 --><div class="card"><div class="pad">
+    <div class="wm">🤝</div>
+    <div class="kicker">Know someone who needs heat or AC?</div>
+    <div class="fifty"><small>$</small>50</div>
+    <div class="lead">Send them our way. When their job's done, this card is worth <b>$50</b> — our thanks.</div>
+    <div class="foot">
+      <div class="brand">MECHANICAL TEMP<small>Licensed HVAC · Metro Detroit</small></div>
+      <div class="phone">(313) 282-4758<small>mechanicaltemp.com</small></div>
+    </div>
+  </div></div>
+  <!-- 4 --><div class="card"><div class="pad">
+    <div class="wm">🤝</div>
+    <div class="kicker">Know someone who needs heat or AC?</div>
+    <div class="fifty"><small>$</small>50</div>
+    <div class="lead">Send them our way. When their job's done, this card is worth <b>$50</b> — our thanks.</div>
+    <div class="foot">
+      <div class="brand">MECHANICAL TEMP<small>Licensed HVAC · Metro Detroit</small></div>
+      <div class="phone">(313) 282-4758<small>mechanicaltemp.com</small></div>
+    </div>
+  </div></div>
+  <!-- 5 --><div class="card"><div class="pad">
+    <div class="wm">🤝</div>
+    <div class="kicker">Know someone who needs heat or AC?</div>
+    <div class="fifty"><small>$</small>50</div>
+    <div class="lead">Send them our way. When their job's done, this card is worth <b>$50</b> — our thanks.</div>
+    <div class="foot">
+      <div class="brand">MECHANICAL TEMP<small>Licensed HVAC · Metro Detroit</small></div>
+      <div class="phone">(313) 282-4758<small>mechanicaltemp.com</small></div>
+    </div>
+  </div></div>
+  <!-- 6 --><div class="card"><div class="pad">
+    <div class="wm">🤝</div>
+    <div class="kicker">Know someone who needs heat or AC?</div>
+    <div class="fifty"><small>$</small>50</div>
+    <div class="lead">Send them our way. When their job's done, this card is worth <b>$50</b> — our thanks.</div>
+    <div class="foot">
+      <div class="brand">MECHANICAL TEMP<small>Licensed HVAC · Metro Detroit</small></div>
+      <div class="phone">(313) 282-4758<small>mechanicaltemp.com</small></div>
+    </div>
+  </div></div>
+  <!-- 7 --><div class="card"><div class="pad">
+    <div class="wm">🤝</div>
+    <div class="kicker">Know someone who needs heat or AC?</div>
+    <div class="fifty"><small>$</small>50</div>
+    <div class="lead">Send them our way. When their job's done, this card is worth <b>$50</b> — our thanks.</div>
+    <div class="foot">
+      <div class="brand">MECHANICAL TEMP<small>Licensed HVAC · Metro Detroit</small></div>
+      <div class="phone">(313) 282-4758<small>mechanicaltemp.com</small></div>
+    </div>
+  </div></div>
+  <!-- 8 --><div class="card"><div class="pad">
+    <div class="wm">🤝</div>
+    <div class="kicker">Know someone who needs heat or AC?</div>
+    <div class="fifty"><small>$</small>50</div>
+    <div class="lead">Send them our way. When their job's done, this card is worth <b>$50</b> — our thanks.</div>
+    <div class="foot">
+      <div class="brand">MECHANICAL TEMP<small>Licensed HVAC · Metro Detroit</small></div>
+      <div class="phone">(313) 282-4758<small>mechanicaltemp.com</small></div>
+    </div>
+  </div></div>
+  <!-- 9 --><div class="card"><div class="pad">
+    <div class="wm">🤝</div>
+    <div class="kicker">Know someone who needs heat or AC?</div>
+    <div class="fifty"><small>$</small>50</div>
+    <div class="lead">Send them our way. When their job's done, this card is worth <b>$50</b> — our thanks.</div>
+    <div class="foot">
+      <div class="brand">MECHANICAL TEMP<small>Licensed HVAC · Metro Detroit</small></div>
+      <div class="phone">(313) 282-4758<small>mechanicaltemp.com</small></div>
+    </div>
+  </div></div>
+  <!-- 10 --><div class="card"><div class="pad">
+    <div class="wm">🤝</div>
+    <div class="kicker">Know someone who needs heat or AC?</div>
+    <div class="fifty"><small>$</small>50</div>
+    <div class="lead">Send them our way. When their job's done, this card is worth <b>$50</b> — our thanks.</div>
+    <div class="foot">
+      <div class="brand">MECHANICAL TEMP<small>Licensed HVAC · Metro Detroit</small></div>
+      <div class="phone">(313) 282-4758<small>mechanicaltemp.com</small></div>
+    </div>
+  </div></div>
+</div>
+
+
+</body>
+</html>
